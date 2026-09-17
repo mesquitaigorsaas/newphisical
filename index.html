@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Phisical — Academia em Alfenas | 21 anos, quase 100 equipamentos</title>
+<meta name="description" content="Referência em estrutura e experiência em Alfenas. Musculação, pilates e aulas coletivas com quase 100 equipamentos e 21 anos transformando vidas. Conheça os planos 2026.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="canonical" href="https://www.newphisical.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="New Phisical — Outra academia. Outro nível.">
+<meta property="og:description" content="21 anos transformando vidas em Alfenas. Quase 100 equipamentos, musculação, pilates e aulas coletivas.">
+<meta property="og:image" content="assets/fotos/og-cover.jpg">
+<meta property="og:url" content="https://www.newphisical.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   NEW PHISICAL — Landing Page
+   Preto + branco (da logo) com acento neon.
+   Trocar o acento = mudar só --neon e --neon-2 aqui embaixo.
+   ============================================================ */
+:root{
+  --black:#0A0A0B;
+  --black-2:#111114;
+  --black-3:#18181D;
+  --black-4:#24242B;
+  --neon:#FFE500;
+  --neon-2:#E0B400;
+  --white:#fff;
+  --gray:#9B9BA6;
+  --gray-2:#6C6C78;
+  --light:#F3F3F0;
+  --r:14px;
+  --r-lg:24px;
+  --max:1240px;
+  --disp:'Anton',Impact,sans-serif;
+  --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);background:var(--black);color:var(--white);
+  font-size:17px;line-height:1.6;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+::selection{background:var(--neon);color:var(--black)}
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:-.005em}
+h1{font-size:clamp(2.9rem,8.2vw,6.6rem)}
+h2{font-size:clamp(2.1rem,5.2vw,4rem)}
+h3{font-size:clamp(1.25rem,2.1vw,1.6rem)}
+.wrap{width:min(100% - 40px,var(--max));margin-inline:auto}
+section{padding:clamp(70px,9vw,130px) 0;position:relative}
+/* o header e fixo: sem isso os links do menu escondem o titulo da secao */
+[id]{scroll-margin-top:104px}
+.neon{color:var(--neon)}
+
+/* textura de grão */
+.grain::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* rótulo numerado das seções */
+.tag{
+  display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.2rem;
+  font:700 .72rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--neon);
+}
+.tag::before{content:"";width:34px;height:2px;background:var(--neon)}
+.lead{color:var(--gray);font-size:clamp(1rem,1.5vw,1.12rem)}
+.light-sec .lead{color:#55555F}
+
+/* ---------- Botões ---------- */
+.btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font:700 .97rem/1 var(--sans);letter-spacing:.04em;text-transform:uppercase;
+  padding:1.18rem 1.9rem;border-radius:8px;border:2px solid transparent;text-decoration:none;
+  cursor:pointer;overflow:hidden;isolation:isolate;
+  transition:transform .3s var(--ease),box-shadow .35s var(--ease),background .3s,color .3s,border-color .3s;
+}
+.btn>*{position:relative;z-index:2}
+.btn::after{
+  content:"";position:absolute;inset:0;z-index:1;transform:translateX(-120%);
+  background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);
+  transition:transform .75s var(--ease);
+}
+.btn:hover::after{transform:translateX(120%)}
+.btn-neon{background:var(--neon);color:var(--black);box-shadow:0 0 0 rgba(255,229,0,0)}
+.btn-neon:hover{box-shadow:0 12px 40px rgba(255,229,0,.42);transform:translateY(-2px)}
+.btn-zap{background:#25D366;color:#04220F;box-shadow:0 12px 30px rgba(37,211,102,.3)}
+.btn-zap:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(37,211,102,.45)}
+.btn-ghost{border-color:rgba(255,255,255,.25);color:#fff}
+.btn-ghost:hover{border-color:var(--neon);color:var(--neon)}
+.btn-dark{background:var(--black);color:#fff}
+.btn-dark:hover{transform:translateY(-2px)}
+.btn-lg{padding:1.35rem 2.3rem;font-size:1.02rem}
+.btn:active{transform:scale(.97)}
+
+/* ---------- Progresso + header ---------- */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:100;background:var(--neon);box-shadow:0 0 14px var(--neon)}
+header{position:fixed;top:0;left:0;right:0;z-index:90;transition:background .4s var(--ease),box-shadow .4s,backdrop-filter .4s}
+header.stuck{background:rgba(10,10,11,.86);backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:94px;transition:height .4s var(--ease)}
+header.stuck .nav{height:74px}
+.brand img{height:42px;width:auto;transition:height .4s var(--ease)}
+header.stuck .brand img{height:36px}
+.nav-links{display:flex;gap:2.1rem;list-style:none;margin:0;padding:0}
+.nav-links a{
+  position:relative;text-decoration:none;font:600 .84rem/1 var(--sans);letter-spacing:.1em;
+  text-transform:uppercase;color:#fff;opacity:.78;transition:opacity .3s,color .3s;
+}
+.nav-links a:hover{opacity:1;color:var(--neon)}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:var(--neon);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav .btn{padding:.92rem 1.5rem;font-size:.82rem}
+@media(max-width:1080px){.nav-links{display:none}}
+@media(max-width:540px){.nav .btn span{display:none}.nav .btn{padding:.9rem 1.2rem}}
+
+/* ---------- HERO ---------- */
+.hero{
+  min-height:100svh;display:flex;align-items:center;overflow:hidden;
+  padding:clamp(130px,16vw,170px) 0 clamp(60px,8vw,90px);background:var(--black);
+}
+/* raios diagonais que atravessam o fundo */
+.beam{position:absolute;width:150%;height:150px;left:-25%;filter:blur(60px);opacity:.22;transform:rotate(-18deg);pointer-events:none}
+.b1{background:var(--neon);top:8%;animation:sweep 13s ease-in-out infinite}
+.b2{background:#4A7CFF;top:52%;opacity:.16;animation:sweep 17s ease-in-out infinite reverse}
+.b3{background:var(--neon-2);bottom:2%;opacity:.12;animation:sweep 21s ease-in-out infinite}
+@keyframes sweep{0%,100%{transform:rotate(-18deg) translateX(-8%)}50%{transform:rotate(-14deg) translateX(8%)}}
+.hero .grid-bg{
+  position:absolute;inset:0;opacity:.05;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.8) 1px,transparent 1px);
+  background-size:70px 70px;
+  mask-image:radial-gradient(ellipse 75% 70% at 45% 45%,#000,transparent 78%);
+}
+.hero-in{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center;width:100%}
+.hero-in>*{min-width:0}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:block;transform:translateY(105%);transition:transform 1s var(--ease)}
+.loaded .hero h1 .ln>span{transform:none}
+.hero h1 .ln:nth-child(2)>span{transition-delay:.1s}
+.hero h1 .ln:nth-child(3)>span{transition-delay:.2s}
+.hero h1 .out{ /* linha vazada, contraste tipográfico */
+  color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.55);
+}
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.loaded .fade-up{opacity:1;transform:none}
+.loaded .d1{transition-delay:.36s}.loaded .d2{transition-delay:.48s}.loaded .d3{transition-delay:.6s}
+.hero p.lead{margin-top:1.7rem;max-width:46ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
+.hero-micro{margin-top:1.2rem;font-size:.85rem;color:var(--gray);display:flex;align-items:center;gap:.5rem}
+.hero-micro b{color:#fff}
+.dot{width:9px;height:9px;border-radius:50%;background:#25D366;position:relative;flex:none}
+.dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;animation:ping 2s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.8}80%,100%{transform:scale(3);opacity:0}}
+
+/* números do hero */
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);overflow:hidden}
+.num{background:var(--black-2);padding:1.9rem 1.6rem;transition:background .35s}
+.num:hover{background:var(--black-3)}
+.num b{display:block;font-family:var(--disp);font-size:clamp(2.2rem,4.2vw,3.4rem);line-height:1;color:var(--neon)}
+.num span{display:block;margin-top:.5rem;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray)}
+@media(max-width:900px){.hero-in{grid-template-columns:1fr}.hero{min-height:auto}}
+@media(max-width:420px){.nums{grid-template-columns:1fr}}
+
+/* ---------- Marquee do slogan ---------- */
+.slogan{background:var(--neon);color:var(--black);padding:1.1rem 0;overflow:hidden;position:relative;z-index:5}
+.slogan-track{display:flex;width:max-content;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+.slogan-track span{
+  font-family:var(--disp);font-size:clamp(1.1rem,2.2vw,1.7rem);text-transform:uppercase;
+  padding:0 1.4rem;white-space:nowrap;display:flex;align-items:center;gap:1.4rem;
+}
+.slogan-track span::after{content:"◆";font-size:.55em;opacity:.55}
+
+/* ---------- Modalidades ---------- */
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.mod{
+  position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--black-2);
+  border:1px solid rgba(255,255,255,.09);text-decoration:none;display:flex;flex-direction:column;
+  transition:transform .45s var(--ease),border-color .4s,box-shadow .45s var(--ease);
+}
+.mod:hover{transform:translateY(-8px);border-color:var(--neon);box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 40px rgba(255,229,0,.14)}
+.mod-art{aspect-ratio:16/11;position:relative;overflow:hidden;background:var(--black-3)}
+.mod-art i,.mod-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s var(--ease)}
+.mod:hover .mod-art i,.mod:hover .mod-art img{transform:scale(1.09)}
+.mod-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,var(--black-2))}
+.mod-art svg{position:absolute;z-index:3;left:1.4rem;bottom:1.2rem;color:var(--neon)}
+.mod-body{padding:1.5rem 1.6rem 1.7rem;flex:1;display:flex;flex-direction:column}
+.mod-body h3{margin-bottom:.55rem}
+.mod-body p{font-size:.92rem;color:var(--gray)}
+.mod-link{margin-top:1.2rem;display:inline-flex;align-items:center;gap:.5rem;font:700 .8rem/1 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:#fff;transition:color .3s}
+.mod:hover .mod-link{color:var(--neon)}
+.mod-link svg{transition:transform .4s var(--ease)}
+.mod:hover .mod-link svg{transform:translateX(6px)}
+@media(max-width:980px){.mods{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.mods{grid-template-columns:1fr}}
+
+/* ---------- Estrutura (seção clara) ---------- */
+.light-sec{background:var(--light);color:var(--black)}
+.light-sec h2,.light-sec h3{color:var(--black)}
+.light-sec .tag{color:#8A6A00}
+.light-sec .tag::before{background:#8A6A00}
+.est-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.est-grid>*{min-width:0}
+.est-list{display:grid;gap:.1rem;margin-top:2rem}
+.est-list div{
+  display:flex;gap:1.1rem;align-items:baseline;padding:1.15rem 0;border-top:1px solid rgba(0,0,0,.12);
+  transition:padding-left .35s var(--ease);
+}
+.est-list div:last-child{border-bottom:1px solid rgba(0,0,0,.12)}
+.est-list div:hover{padding-left:12px}
+.est-list b{font-family:var(--disp);font-size:1.5rem;color:#8A6A00;flex:none;width:52px}
+.est-list p{font-size:.97rem;color:#3C3C44}
+.est-visual{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.est-tile{
+  aspect-ratio:1;border-radius:var(--r-lg);overflow:hidden;position:relative;background:var(--black);
+  transition:transform .5s var(--ease);
+}
+.est-tile:nth-child(2){margin-top:2.2rem}
+.est-tile:nth-child(3){margin-top:-2.2rem}
+.est-tile i,.est-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s var(--ease)}
+.est-tile:hover{transform:translateY(-8px)}
+.est-tile:hover i,.est-tile:hover img{transform:scale(1.1)}
+@media(max-width:900px){.est-grid{grid-template-columns:1fr}.est-tile:nth-child(n){margin-top:0}}
+
+/* ---------- Planos ---------- */
+.planos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;align-items:start}
+.plano{
+  position:relative;background:var(--black-2);border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r-lg);padding:2.2rem 1.9rem;display:flex;flex-direction:column;
+  transition:transform .45s var(--ease),border-color .4s,box-shadow .45s var(--ease);
+}
+.plano:hover{transform:translateY(-8px);border-color:rgba(255,229,0,.5)}
+.plano.destaque{
+  background:linear-gradient(170deg,var(--black-3),var(--black-2));
+  border-color:var(--neon);box-shadow:0 0 60px rgba(255,229,0,.15);
+}
+.plano.destaque::before{
+  content:"Mais escolhido";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--neon);color:var(--black);font:800 .68rem/1 var(--sans);letter-spacing:.12em;
+  text-transform:uppercase;padding:.55rem .95rem;border-radius:99px;white-space:nowrap;
+}
+.plano h3{margin-bottom:.4rem}
+.plano>p{font-size:.88rem;color:var(--gray)}
+.preco{margin:1.6rem 0 1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.preco b{font-family:var(--disp);font-size:clamp(2rem,3.6vw,2.7rem);line-height:1;color:#fff;display:block}
+.preco small{font-size:.8rem;color:var(--gray-2);letter-spacing:.06em}
+.plano ul{list-style:none;padding:0;margin:0 0 1.9rem;display:grid;gap:.75rem}
+.plano li{display:flex;gap:.7rem;align-items:flex-start;font-size:.92rem;color:#D8D8DE}
+.plano li svg{flex:none;color:var(--neon);margin-top:3px}
+.plano .btn{margin-top:auto}
+@media(max-width:940px){.planos{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
+
+/* ---------- Passos ---------- */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;position:relative}
+.passo{
+  position:relative;padding:2.3rem 1.8rem;border-radius:var(--r-lg);background:var(--black-2);
+  border:1px solid rgba(255,255,255,.09);overflow:hidden;transition:border-color .4s,transform .45s var(--ease);
+}
+.passo:hover{border-color:var(--neon);transform:translateY(-6px)}
+.passo b{
+  font-family:var(--disp);font-size:4.2rem;line-height:.8;color:transparent;
+  -webkit-text-stroke:2px rgba(255,229,0,.55);display:block;margin-bottom:1rem;transition:.45s var(--ease);
+}
+.passo:hover b{-webkit-text-stroke-color:var(--neon);color:rgba(255,229,0,.12)}
+.passo h3{margin-bottom:.55rem}
+.passo p{font-size:.93rem;color:var(--gray)}
+@media(max-width:860px){.passos{grid-template-columns:1fr}}
+
+/* ---------- Instagram ---------- */
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem;margin-top:2.6rem}
+.ig-cell{aspect-ratio:1;border-radius:var(--r);overflow:hidden;position:relative;transition:transform .45s var(--ease)}
+.ig-cell i,.ig-cell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.ig-cell::after{
+  content:"";position:absolute;inset:0;background:rgba(255,229,0,.25);opacity:0;transition:opacity .35s;
+  backdrop-filter:blur(2px);
+}
+.ig-cell:hover{transform:scale(1.05)}
+.ig-cell:hover i,.ig-cell:hover img{transform:scale(1.12)}
+.ig-cell:hover::after{opacity:1}
+@media(max-width:780px){.ig-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- Localização ---------- */
+.local{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+.card-d{background:var(--black-2);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:2.2rem 2rem}
+.card-d h3{margin-bottom:1.3rem}
+.card-d dl{margin:0;display:grid;gap:.85rem;font-size:.94rem}
+.card-d dl div{display:flex;gap:.9rem;align-items:flex-start;padding-bottom:.85rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.card-d dl div:last-child{border-bottom:0;padding-bottom:0}
+.card-d dt{color:var(--neon);flex:none;font-weight:700;min-width:74px;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;padding-top:3px}
+.card-d dd{margin:0;color:#D8D8DE}
+.card-d .btn{margin-top:1.8rem}
+@media(max-width:860px){.local{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:840px;margin-inline:auto;display:grid;gap:.7rem}
+details{background:var(--black-2);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);overflow:hidden;transition:border-color .35s}
+details[open]{border-color:rgba(255,229,0,.5)}
+summary{
+  padding:1.35rem 1.6rem;cursor:pointer;font-weight:600;font-size:1rem;color:#fff;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;list-style:none;transition:color .3s;
+}
+summary:hover{color:var(--neon)}
+summary::-webkit-details-marker{display:none}
+.pm{position:relative;width:18px;height:18px;flex:none}
+.pm::before,.pm::after{content:"";position:absolute;background:var(--neon);border-radius:2px;transition:transform .4s var(--ease)}
+.pm::before{left:0;right:0;top:8px;height:2px}
+.pm::after{top:0;bottom:0;left:8px;width:2px}
+details[open] .pm::after{transform:scaleY(0)}
+details[open] .pm::before{transform:rotate(180deg)}
+details p{padding:0 1.6rem 1.5rem;font-size:.95rem;color:var(--gray)}
+details[open] p{animation:rev .45s var(--ease)}
+@keyframes rev{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* ---------- CTA final ---------- */
+.final{text-align:center;overflow:hidden;background:var(--black-2)}
+.final h2{max-width:16ch;margin-inline:auto}
+.final p{color:var(--gray);max-width:50ch;margin:1.4rem auto 2.4rem}
+.final .wrap{position:relative;z-index:3}
+
+/* ---------- Footer ---------- */
+footer.site{background:#060607;color:var(--gray);padding:3.8rem 0 2rem;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.6rem;padding-bottom:2.6rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-grid img{height:46px;width:auto;margin-bottom:1.3rem}
+footer.site h4{font:800 .74rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 1.2rem}
+footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.65rem}
+footer.site a{text-decoration:none;transition:color .3s,padding-left .3s}
+footer.site a:hover{color:var(--neon);padding-left:5px}
+.foot-bottom{padding-top:1.7rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.78rem;color:var(--gray-2)}
+@media(max-width:780px){.foot-grid{grid-template-columns:1fr;gap:2.1rem}}
+
+/* ---------- WhatsApp flutuante + barra mobile ---------- */
+.zap-float{
+  position:fixed;right:24px;bottom:26px;z-index:95;width:62px;height:62px;border-radius:50%;
+  background:#25D366;display:grid;place-items:center;color:#fff;text-decoration:none;
+  box-shadow:0 14px 34px rgba(37,211,102,.45);transition:transform .4s var(--ease);
+}
+.zap-float:hover{transform:scale(1.1) rotate(-6deg)}
+.zap-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;animation:ping 2.6s ease-out infinite;z-index:-1}
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:96;display:none;gap:.6rem;padding:.75rem .9rem;
+  background:rgba(10,10,11,.95);backdrop-filter:blur(14px);border-top:1px solid rgba(255,255,255,.1);
+}
+.mobile-bar .btn{flex:1;padding:1.05rem .7rem;font-size:.82rem}
+@media(max-width:700px){.mobile-bar{display:flex}.zap-float{display:none}body{padding-bottom:80px}}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .reveal,.fade-up,.hero h1 .ln>span{opacity:1!important;transform:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- ================= HEADER ================= -->
+<header id="topo">
+  <div class="wrap nav">
+    <a class="brand" href="#topo" aria-label="New Phisical — início">
+      <img src="assets/logo.png" alt="New Phisical">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#modalidades">Modalidades</a></li>
+        <li><a href="#estrutura">Estrutura</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#comecar">Como começar</a></li>
+        <li><a href="#onde">Onde estamos</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-neon magnet" href="#" data-zap="Ola! Vim pelo site da New Phisical e quero conhecer a academia." data-ev="cta_header">
+      <span>Quero treinar</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero grain">
+  <div class="beam b1"></div>
+  <div class="beam b2"></div>
+  <div class="beam b3"></div>
+  <div class="grid-bg"></div>
+
+  <div class="wrap hero-in">
+    <div>
+      <span class="tag fade-up">Alfenas — MG · desde 2005</span>
+      <h1>
+        <span class="ln"><span>Outra</span></span>
+        <span class="ln"><span class="out">academia.</span></span>
+        <span class="ln"><span>Outro <span class="neon">nível.</span></span></span>
+      </h1>
+      <p class="lead fade-up d1">
+        Quase 100 equipamentos, musculação, pilates e aulas coletivas — com 21 anos de
+        experiência de quem já transformou milhares de rotinas aqui em Alfenas.
+        Sua primeira aula começa com uma mensagem.
+      </p>
+      <div class="hero-ctas fade-up d2">
+        <a class="btn btn-neon btn-lg magnet" href="#" data-zap="Ola! Quero agendar uma visita na New Phisical." data-ev="cta_hero_visita">
+          <span>Agendar minha visita</span>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#planos" data-ev="cta_hero_planos">Ver planos 2026</a>
+      </div>
+      <p class="hero-micro fade-up d3"><span class="dot"></span> Atendimento no WhatsApp — <b>resposta rápida em horário comercial</b></p>
+    </div>
+
+    <div class="nums fade-up d3">
+      <div class="num"><b data-count="21">0</b><span>anos transformando vidas</span></div>
+      <div class="num"><b data-count="100" data-prefix="~">0</b><span>equipamentos físicos</span></div>
+      <div class="num"><b data-count="8563" data-prefix="+">0</b><span>seguidores no Instagram</span></div>
+      <div class="num"><b data-count="3" data-suffix="+">0</b><span>modalidades no mesmo plano</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SLOGAN ================= -->
+<div class="slogan" aria-hidden="true">
+  <div class="slogan-track" id="slogan">
+    <span>Outra academia. Outro nível.</span>
+    <span>21 anos em Alfenas</span>
+    <span>Musculação</span>
+    <span>Pilates</span>
+    <span>Aulas coletivas</span>
+    <span>Quase 100 equipamentos</span>
+  </div>
+</div>
+
+<!-- ================= MODALIDADES ================= -->
+<section id="modalidades" class="grain">
+  <div class="wrap">
+    <div class="reveal" style="max-width:720px;margin-bottom:clamp(2.4rem,4.5vw,3.6rem)">
+      <span class="tag">01 / Modalidades</span>
+      <h2>Treine do seu jeito,<br>no seu ritmo</h2>
+      <p class="lead" style="margin-top:1.2rem">Escolha por onde quer começar e fale direto com a recepção — a gente te explica tudo e já agenda a sua visita.</p>
+    </div>
+
+    <div class="mods">
+      <a class="mod reveal" href="#" data-zap="Ola! Quero informacoes sobre a musculacao." data-ev="mod_musculacao">
+        <div class="mod-art"><img src="assets/fotos/modalidade-musculacao.jpg" alt="Area de musculacao com rack de halteres" loading="lazy" width="900" height="620">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6v12M18 6v12M2 9v6M22 9v6M6 12h12"/></svg>
+        </div>
+        <div class="mod-body">
+          <h3>Musculação</h3>
+          <p>Quase 100 equipamentos para força, hipertrofia e condicionamento, com acompanhamento de quem entende.</p>
+          <span class="mod-link">Saber mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="mod reveal" href="#" data-zap="Ola! Quero informacoes e horarios do Pilates." data-ev="mod_pilates">
+        <div class="mod-art"><img src="assets/fotos/modalidade-pilates.jpg" alt="Aula de pilates com anel" loading="lazy" width="900" height="620">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="5" r="2.4"/><path d="M12 8v6M8 21l4-7 4 7M6 11h12"/></svg>
+        </div>
+        <div class="mod-body">
+          <h3>Pilates</h3>
+          <p>Postura, mobilidade e alívio de dor em turmas reduzidas. Horários e valores no WhatsApp.</p>
+          <span class="mod-link">Ver horários <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="mod reveal" href="#" data-zap="Ola! Quero saber quais aulas coletivas voces tem." data-ev="mod_coletivas">
+        <div class="mod-art"><img src="assets/fotos/modalidade-coletivas.jpg" alt="Aula coletiva em grupo" loading="lazy" width="900" height="620">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="7" r="2.6"/><circle cx="16" cy="7" r="2.6"/><path d="M3 20v-2a4 4 0 0 1 4-4h2M14 14h3a4 4 0 0 1 4 4v2"/></svg>
+        </div>
+        <div class="mod-body">
+          <h3>Aulas coletivas</h3>
+          <p>Treino em grupo, com energia e professor puxando o ritmo — o jeito mais fácil de não desistir na segunda semana.</p>
+          <span class="mod-link">Ver a grade <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ESTRUTURA ================= -->
+<section id="estrutura" class="light-sec">
+  <div class="wrap est-grid">
+    <div class="reveal">
+      <span class="tag">02 / Estrutura</span>
+      <h2>Referência em estrutura na cidade</h2>
+      <p class="lead" style="margin-top:1.2rem">
+        Não é força de expressão: é a maior variedade de equipamentos que você vai encontrar por aqui —
+        somada a 21 anos aprendendo o que realmente faz diferença no dia a dia de quem treina.
+      </p>
+      <div class="est-list">
+        <div><b>~100</b><p>equipamentos físicos entre máquinas, pesos livres e cardio</p></div>
+        <div><b>21</b><p>anos de operação em Alfenas, com time que conhece cada aluno pelo nome</p></div>
+        <div><b>3+</b><p>modalidades para você variar o treino sem trocar de academia</p></div>
+        <div><b>8,5k</b><p>pessoas acompanhando a rotina da New no Instagram</p></div>
+      </div>
+    </div>
+
+    <!-- FOTOS ILUSTRATIVAS (Unsplash) — trocar pelas fotos reais da academia -->
+    <div class="est-visual reveal" aria-hidden="true">
+      <div class="est-tile"><img src="assets/fotos/estrutura-1.jpg" alt="" loading="lazy" width="700" height="700"></div>
+      <div class="est-tile"><img src="assets/fotos/estrutura-2.jpg" alt="" loading="lazy" width="700" height="700"></div>
+      <div class="est-tile"><img src="assets/fotos/estrutura-3.jpg" alt="" loading="lazy" width="700" height="700"></div>
+      <div class="est-tile"><img src="assets/fotos/estrutura-4.jpg" alt="" loading="lazy" width="700" height="700"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLANOS ================= -->
+<section id="planos" class="grain">
+  <div class="wrap">
+    <div class="reveal" style="max-width:700px;margin:0 auto clamp(2.6rem,4.5vw,3.8rem);text-align:center">
+      <span class="tag" style="justify-content:center">03 / Planos 2026</span>
+      <h2>Escolha o seu e comece essa semana</h2>
+      <p class="lead" style="margin-top:1.2rem">Quanto maior o compromisso, menor a mensalidade. Fale com a recepção e garanta a condição do mês.</p>
+    </div>
+
+    <!-- ⚠️ PREENCHER: os valores abaixo são placeholders. -->
+    <div class="planos">
+      <div class="plano reveal">
+        <h3>Mensal</h3>
+        <p>Para quem quer experimentar sem amarrar nada.</p>
+        <div class="preco"><b>Consultar</b><small>sem fidelidade</small></div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Acesso à musculação</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Treino montado por professor</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Livre acesso em todos os horários</li>
+        </ul>
+        <a class="btn btn-ghost" href="#" data-zap="Ola! Quero saber o valor do plano mensal." data-ev="plano_mensal">Ver valor</a>
+      </div>
+
+      <div class="plano destaque reveal">
+        <h3>Trimestral</h3>
+        <p>O equilíbrio entre preço e compromisso — o mais procurado.</p>
+        <div class="preco"><b>Consultar</b><small>melhor custo-benefício</small></div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Tudo do plano mensal</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Aulas coletivas inclusas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Avaliação e reajuste de treino</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Mensalidade menor que o mensal</li>
+        </ul>
+        <a class="btn btn-neon" href="#" data-zap="Ola! Quero saber o valor do plano trimestral." data-ev="plano_trimestral">Quero esse</a>
+      </div>
+
+      <div class="plano reveal">
+        <h3>Anual</h3>
+        <p>Para quem já decidiu que 2026 é o ano.</p>
+        <div class="preco"><b>Consultar</b><small>menor mensalidade</small></div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Tudo do plano trimestral</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Condição especial de matrícula</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Preço travado o ano inteiro</li>
+        </ul>
+        <a class="btn btn-ghost" href="#" data-zap="Ola! Quero saber o valor do plano anual." data-ev="plano_anual">Ver valor</a>
+      </div>
+    </div>
+
+    <p class="lead reveal" style="text-align:center;margin-top:2.2rem;font-size:.9rem">
+      Também temos <strong style="color:#fff">pacotes de pilates</strong> e condições para casais e estudantes — pergunte no WhatsApp.
+    </p>
+  </div>
+</section>
+
+<!-- ================= COMO COMEÇAR ================= -->
+<section id="comecar" class="light-sec">
+  <div class="wrap">
+    <div class="reveal" style="max-width:680px;margin:0 auto clamp(2.4rem,4.5vw,3.6rem);text-align:center">
+      <span class="tag" style="justify-content:center">04 / Como começar</span>
+      <h2>Do primeiro contato ao primeiro treino</h2>
+    </div>
+
+    <div class="passos" style="--c:#000">
+      <div class="passo reveal" style="background:#fff;border-color:rgba(0,0,0,.1)">
+        <b style="-webkit-text-stroke-color:rgba(138,106,0,.5)">01</b>
+        <h3>Chame no WhatsApp</h3>
+        <p style="color:#4A4A52">Conte o seu objetivo e o horário que você consegue treinar. A recepção te responde com tudo explicado.</p>
+      </div>
+      <div class="passo reveal" style="background:#fff;border-color:rgba(0,0,0,.1)">
+        <b style="-webkit-text-stroke-color:rgba(138,106,0,.5)">02</b>
+        <h3>Conheça a academia</h3>
+        <p style="color:#4A4A52">Venha ver a estrutura de perto, sem compromisso. Você vai entender na hora por que a gente fala em "outro nível".</p>
+      </div>
+      <div class="passo reveal" style="background:#fff;border-color:rgba(0,0,0,.1)">
+        <b style="-webkit-text-stroke-color:rgba(138,106,0,.5)">03</b>
+        <h3>Comece a treinar</h3>
+        <p style="color:#4A4A52">Escolhe o plano, monta o treino com o professor e já começa no mesmo dia. Simples desse jeito.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem" class="reveal">
+      <a class="btn btn-zap btn-lg magnet" href="#" data-zap="Ola! Quero comecar a treinar na New Phisical." data-ev="cta_comecar">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.17c-.25.69-1.45 1.32-2 1.36-.51.04-1.16.23-3.76-.78-3.17-1.23-5.18-4.44-5.34-4.65-.16-.21-1.28-1.7-1.28-3.25s.81-2.31 1.1-2.62c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.71.54.25.61.86 2.11.94 2.26.08.16.13.34.02.55-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.65.18.31.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.49 1.54.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.79.85 2.1 1 .31.16.51.23.59.36.08.13.08.75-.17 1.44Z"/></svg>
+        <span>Falar com a recepção</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section class="grain">
+  <div class="wrap">
+    <div class="reveal" style="max-width:680px;margin-inline:auto;text-align:center">
+      <span class="tag" style="justify-content:center">05 / Bastidores</span>
+      <h2>8,5 mil pessoas acompanham a New</h2>
+      <p class="lead" style="margin-top:1.2rem">Treinos, alunos, novidades e a grade de aulas da semana — tudo no @newphisicaloficial.</p>
+      <div style="margin-top:2rem">
+        <a class="btn btn-ghost magnet" href="https://www.instagram.com/newphisicaloficial/" target="_blank" rel="noopener" data-ev="cta_instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+          <span>Seguir no Instagram</span>
+        </a>
+      </div>
+    </div>
+    <!-- FOTOS ILUSTRATIVAS (Unsplash) — trocar por prints dos posts reais -->
+    <div class="ig-grid reveal">
+      <a class="ig-cell" href="https://www.instagram.com/newphisicaloficial/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><img src="assets/fotos/ig-1.jpg" alt="Post do Instagram da New Phisical" loading="lazy" width="600" height="600"></a>
+      <a class="ig-cell" href="https://www.instagram.com/newphisicaloficial/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><img src="assets/fotos/ig-2.jpg" alt="Post do Instagram da New Phisical" loading="lazy" width="600" height="600"></a>
+      <a class="ig-cell" href="https://www.instagram.com/newphisicaloficial/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><img src="assets/fotos/ig-3.jpg" alt="Post do Instagram da New Phisical" loading="lazy" width="600" height="600"></a>
+      <a class="ig-cell" href="https://www.instagram.com/newphisicaloficial/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><img src="assets/fotos/ig-4.jpg" alt="Post do Instagram da New Phisical" loading="lazy" width="600" height="600"></a>
+      <a class="ig-cell" href="https://www.instagram.com/newphisicaloficial/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><img src="assets/fotos/ig-5.jpg" alt="Post do Instagram da New Phisical" loading="lazy" width="600" height="600"></a>
+      <a class="ig-cell" href="https://www.instagram.com/newphisicaloficial/" target="_blank" rel="noopener" aria-label="Ver no Instagram"><img src="assets/fotos/ig-6.jpg" alt="Post do Instagram da New Phisical" loading="lazy" width="600" height="600"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ONDE ESTAMOS ================= -->
+<section id="onde">
+  <div class="wrap">
+    <div class="reveal" style="max-width:680px;margin-bottom:clamp(2.2rem,4vw,3.2rem)">
+      <span class="tag">06 / Onde estamos</span>
+      <h2>Venha conhecer de perto</h2>
+    </div>
+
+    <div class="local">
+      <div class="card-d reveal">
+        <h3>New Phisical Alfenas</h3>
+        <dl>
+          <div><dt>Endereço</dt><dd>Endereço da academia — Alfenas/MG</dd></div>
+          <div><dt>WhatsApp</dt><dd>(35) 9 9917-1977</dd></div>
+          <div><dt>Instagram</dt><dd>@newphisicaloficial</dd></div>
+        </dl>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/New+Phisical+Alfenas+MG" target="_blank" rel="noopener" data-ev="mapa">Abrir no Google Maps</a>
+      </div>
+
+      <div class="card-d reveal">
+        <h3>Horários</h3>
+        <dl>
+          <div><dt>Seg a sex</dt><dd>06h às 22h</dd></div>
+          <div><dt>Sábado</dt><dd>08h às 13h</dd></div>
+          <div><dt>Domingo</dt><dd>Fechado</dd></div>
+          <div><dt>Pilates</dt><dd>Turmas com horário marcado — consulte a grade</dd></div>
+        </dl>
+        <a class="btn btn-zap" href="#" data-zap="Ola! Quero confirmar os horarios de funcionamento." data-ev="cta_horarios">
+          <span>Confirmar horários</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="grain">
+  <div class="wrap">
+    <div class="reveal" style="max-width:680px;margin:0 auto clamp(2.2rem,4vw,3.2rem);text-align:center">
+      <span class="tag" style="justify-content:center">07 / Dúvidas</span>
+      <h2>Antes de você perguntar</h2>
+    </div>
+
+    <div class="faq reveal">
+      <details open>
+        <summary>Preciso de experiência para começar? <span class="pm"></span></summary>
+        <p>Não. A maior parte de quem entra aqui nunca treinou antes. O professor monta um treino do seu nível e te acompanha nas primeiras semanas, que é justamente quando a maioria desiste sozinha.</p>
+      </details>
+      <details>
+        <summary>Posso conhecer a academia antes de fechar o plano? <span class="pm"></span></summary>
+        <p>Pode e deve. Chame no WhatsApp, marque um horário e venha ver a estrutura sem compromisso nenhum.</p>
+      </details>
+      <details>
+        <summary>As aulas coletivas estão inclusas no plano? <span class="pm"></span></summary>
+        <p>Depende do plano escolhido. Fale com a recepção que a gente te explica exatamente o que entra em cada um.</p>
+      </details>
+      <details>
+        <summary>Como funcionam as turmas de pilates? <span class="pm"></span></summary>
+        <p>O pilates é em turmas reduzidas e com horário marcado, então as vagas são limitadas. Consulte a grade e os pacotes disponíveis pelo WhatsApp.</p>
+      </details>
+      <details>
+        <summary>Quais são as formas de pagamento? <span class="pm"></span></summary>
+        <p>Pix, cartão de crédito e débito e dinheiro na recepção. Combine com a equipe a melhor forma para o seu plano.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="final grain">
+  <div class="beam b1" style="opacity:.14"></div>
+  <div class="wrap">
+    <span class="tag reveal" style="justify-content:center">Bora começar?</span>
+    <h2 class="reveal">O primeiro treino<br>começa com <span class="neon">uma mensagem</span></h2>
+    <p class="reveal">Sem formulário, sem enrolação. Chama a gente no WhatsApp e agenda sua visita para esta semana.</p>
+    <div class="reveal">
+      <a class="btn btn-neon btn-lg magnet" href="#" data-zap="Ola! Quero agendar minha visita na New Phisical." data-ev="cta_final">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.17c-.25.69-1.45 1.32-2 1.36-.51.04-1.16.23-3.76-.78-3.17-1.23-5.18-4.44-5.34-4.65-.16-.21-1.28-1.7-1.28-3.25s.81-2.31 1.1-2.62c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.71.54.25.61.86 2.11.94 2.26.08.16.13.34.02.55-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.65.18.31.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.49 1.54.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.79.85 2.1 1 .31.16.51.23.59.36.08.13.08.75-.17 1.44Z"/></svg>
+        <span>Agendar minha visita</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/logo.png" alt="New Phisical">
+        <p>Referência em estrutura e experiência em Alfenas — MG.<br>21 anos transformando vidas.</p>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#modalidades">Modalidades</a></li>
+          <li><a href="#estrutura">Estrutura</a></li>
+          <li><a href="#planos">Planos 2026</a></li>
+          <li><a href="#comecar">Como começar</a></li>
+          <li><a href="#onde">Onde estamos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fale com a gente</h4>
+        <ul>
+          <li><a href="#" data-zap="Ola! Vim pelo site da New Phisical." data-ev="cta_footer">WhatsApp (35) 9 9917-1977</a></li>
+          <li><a href="https://www.instagram.com/newphisicaloficial/" target="_blank" rel="noopener">Instagram @newphisicaloficial</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="ano"></span> New Phisical. Todos os direitos reservados.</span>
+      <span>Alfenas — Minas Gerais</span>
+    </div>
+  </div>
+</footer>
+
+<a class="zap-float" href="#" data-zap="Ola! Vim pelo site da New Phisical." data-ev="cta_float" aria-label="Falar no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.17c-.25.69-1.45 1.32-2 1.36-.51.04-1.16.23-3.76-.78-3.17-1.23-5.18-4.44-5.34-4.65-.16-.21-1.28-1.7-1.28-3.25s.81-2.31 1.1-2.62c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.71.54.25.61.86 2.11.94 2.26.08.16.13.34.02.55-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.65.18.31.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.49 1.54.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.79.85 2.1 1 .31.16.51.23.59.36.08.13.08.75-.17 1.44Z"/></svg>
+</a>
+
+<div class="mobile-bar">
+  <a class="btn btn-ghost" href="#planos">Ver planos</a>
+  <a class="btn btn-neon" href="#" data-zap="Ola! Quero agendar minha visita na New Phisical." data-ev="cta_mobilebar"><span>Agendar visita</span></a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ExerciseGym",
+  "name":"New Phisical",
+  "description":"Academia em Alfenas com quase 100 equipamentos, musculação, pilates e aulas coletivas. 21 anos de experiência.",
+  "image":"assets/logo.png",
+  "url":"https://www.newphisical.com.br/",
+  "telephone":"+5535999171977",
+  "sameAs":["https://www.instagram.com/newphisicaloficial/"],
+  "address":{"@type":"PostalAddress","addressLocality":"Alfenas","addressRegion":"MG","addressCountry":"BR"},
+  "openingHours":["Mo-Fr 06:00-22:00","Sa 08:00-13:00"]
+}
+</script>
+
+<script>
+/* ============================================================
+   1) Configuração
+   ============================================================ */
+const NEW = {
+  telefone: '5535999171977',
+  mensagemPadrao: 'Ola! Vim pelo site da New Phisical.'
+};
+const suave = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ============================================================
+   2) WhatsApp + UTMs da campanha
+   ============================================================ */
+const params = new URLSearchParams(location.search);
+const utms = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']
+  .filter(k => params.get(k)).map(k => `${k}=${params.get(k)}`).join(' | ');
+
+const linkZap = msg =>
+  `https://wa.me/${NEW.telefone}?text=` +
+  encodeURIComponent((msg || NEW.mensagemPadrao) + (utms ? `\n(origem: ${utms})` : ''));
+
+document.querySelectorAll('[data-zap]').forEach(el => {
+  el.href = linkZap(el.dataset.zap);
+  el.target = '_blank';
+  el.rel = 'noopener';
+});
+
+/* ============================================================
+   3) Rastreio (GA4 / Meta Pixel / GTM, se instalados)
+   ============================================================ */
+function track(ev){
+  if (window.gtag) gtag('event', ev, {event_category:'conversao'});
+  if (window.fbq) fbq('trackCustom', ev);
+  if (window.dataLayer) dataLayer.push({event: ev});
+}
+document.querySelectorAll('[data-ev]').forEach(el =>
+  el.addEventListener('click', () => track(el.dataset.ev)));
+
+/* ============================================================
+   4) Entrada + reveal no scroll
+   ============================================================ */
+addEventListener('load', () => document.body.classList.add('loaded'));
+setTimeout(() => document.body.classList.add('loaded'), 900);
+
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.13, rootMargin:'0px 0px -40px'});
+
+document.querySelectorAll('.reveal').forEach(el => {
+  const irmaos = [...(el.parentElement?.children || [])].filter(c => c.classList.contains('reveal'));
+  el.style.transitionDelay = `${Math.min(irmaos.indexOf(el), 5) * 90}ms`;
+  io.observe(el);
+});
+
+/* rede de segurança: nada pode ficar invisível se o observer não rodar */
+function revelaVisiveis(){
+  document.querySelectorAll('.reveal:not(.in)').forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.top < innerHeight * 1.1 && r.bottom > 0) el.classList.add('in');
+  });
+}
+addEventListener('visibilitychange', () => { if (!document.hidden) revelaVisiveis(); });
+addEventListener('hashchange', () => setTimeout(revelaVisiveis, 60));
+setTimeout(revelaVisiveis, 2500);
+
+/* ============================================================
+   5) Barra de progresso + header
+   ============================================================ */
+const bar = document.getElementById('progress');
+const head = document.querySelector('header');
+function onScroll(){
+  const max = document.documentElement.scrollHeight - innerHeight;
+  bar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+  head.classList.toggle('stuck', scrollY > 60);
+  revelaVisiveis(); // garante o reveal mesmo em salto por ancora ou scroll muito rapido
+}
+addEventListener('scroll', onScroll, {passive:true});
+addEventListener('resize', onScroll);
+onScroll();
+
+/* ============================================================
+   6) Contadores
+   ============================================================ */
+const ioNum = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, alvo = +el.dataset.count;
+    const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    if (!suave){ el.textContent = pre + alvo.toLocaleString('pt-BR') + suf; ioNum.unobserve(el); return; }
+    const dur = 1400, t0 = performance.now();
+    const passo = t => {
+      const p = Math.min(1, (t - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + Math.round(alvo * eased).toLocaleString('pt-BR') + suf;
+      if (p < 1) requestAnimationFrame(passo);
+    };
+    requestAnimationFrame(passo);
+    ioNum.unobserve(el);
+  });
+}, {threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el => ioNum.observe(el));
+
+/* ============================================================
+   7) Botões magnéticos
+   ============================================================ */
+if (suave && matchMedia('(pointer: fine)').matches){
+  document.querySelectorAll('.magnet').forEach(el => {
+    el.addEventListener('mousemove', e => {
+      const r = el.getBoundingClientRect();
+      el.style.transform = `translate(${(e.clientX - r.left - r.width/2) * .2}px, ${(e.clientY - r.top - r.height/2) * .3}px)`;
+    });
+    el.addEventListener('mouseleave', () => el.style.transform = '');
+  });
+}
+
+/* slogan em loop contínuo */
+const sl = document.getElementById('slogan');
+if (sl) sl.innerHTML += sl.innerHTML;
+
+document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
