@@ -183,21 +183,27 @@ body.menu-on{overflow:hidden}
 
 /* ---------- HERO ---------- */
 .hero{
-  min-height:100svh;display:flex;align-items:center;overflow:hidden;
+  position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;
   padding:clamp(130px,16vw,170px) 0 clamp(60px,8vw,90px);background:var(--black);
 }
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:grayscale(.45) contrast(1.1)}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,var(--black) 26%,rgba(10,10,11,.86) 52%,rgba(10,10,11,.55) 100%),
+             linear-gradient(0deg,var(--black),transparent 42%);
+}
+/* faixas diagonais neon atravessando o hero */
+.hero-rays{position:absolute;inset:-30% -20%;z-index:1;opacity:.14;pointer-events:none;
+  background:repeating-linear-gradient(108deg,var(--neon) 0 2px,transparent 2px 72px);
+  animation:rays 22s linear infinite}
+@keyframes rays{to{transform:translateX(72px)}}
 /* raios diagonais que atravessam o fundo */
 .beam{position:absolute;width:150%;height:150px;left:-25%;filter:blur(60px);opacity:.22;transform:rotate(-18deg);pointer-events:none}
 .b1{background:var(--neon);top:8%;animation:sweep 13s ease-in-out infinite}
 .b2{background:#4A7CFF;top:52%;opacity:.16;animation:sweep 17s ease-in-out infinite reverse}
 .b3{background:var(--neon-2);bottom:2%;opacity:.12;animation:sweep 21s ease-in-out infinite}
 @keyframes sweep{0%,100%{transform:rotate(-18deg) translateX(-8%)}50%{transform:rotate(-14deg) translateX(8%)}}
-.hero .grid-bg{
-  position:absolute;inset:0;opacity:.05;pointer-events:none;
-  background-image:linear-gradient(rgba(255,255,255,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.8) 1px,transparent 1px);
-  background-size:70px 70px;
-  mask-image:radial-gradient(ellipse 75% 70% at 45% 45%,#000,transparent 78%);
-}
 .hero-in{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center} /* sem width:100%: sobrescreveria a margem do .wrap */
 .hero-in>*{min-width:0}
 .hero h1 .ln{display:block;overflow:hidden}
@@ -467,10 +473,8 @@ footer.site a:hover{color:var(--neon);padding-left:5px}
 
 <!-- ================= HERO ================= -->
 <section class="hero grain">
-  <div class="beam b1"></div>
-  <div class="beam b2"></div>
-  <div class="beam b3"></div>
-  <div class="grid-bg"></div>
+  <div class="hero-bg"><img src="assets/fotos/hero.jpg" alt="" fetchpriority="high"></div>
+  <div class="hero-rays"></div>
 
   <div class="wrap hero-in">
     <div>
